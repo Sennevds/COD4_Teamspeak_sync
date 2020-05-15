@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="B3Status">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Game" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Data" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" />
+                  <xs:attribute name="Value" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="CapatureLimit" type="xs:string" />
+            <xs:attribute name="FragLimit" type="xs:string" />
+            <xs:attribute name="Map" type="xs:string" />
+            <xs:attribute name="MapTime" type="xs:string" />
+            <xs:attribute name="Name" type="xs:string" />
+            <xs:attribute name="RoundTime" type="xs:string" />
+            <xs:attribute name="Rounds" type="xs:string" />
+            <xs:attribute name="TimeLimit" type="xs:string" />
+            <xs:attribute name="Type" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Clients" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Client" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="CID" type="xs:string" />
+                  <xs:attribute name="ColorName" type="xs:string" />
+                  <xs:attribute name="DBID" type="xs:string" />
+                  <xs:attribute name="IP" type="xs:string" />
+                  <xs:attribute name="ID" type="xs:string" />
+                  <xs:attribute name="Score" type="xs:string" />
+                  <xs:attribute name="Kills" type="xs:string" />
+                  <xs:attribute name="Deaths" type="xs:string" />
+                  <xs:attribute name="Assists" type="xs:string" />
+                  <xs:attribute name="Ping" type="xs:string" />
+                  <xs:attribute name="Team" type="xs:string" />
+                  <xs:attribute name="TeamName" type="xs:string" />
+                  <xs:attribute name="Updated" type="xs:string" />
+                  <xs:attribute name="power" type="xs:string" />
+                  <xs:attribute name="rank" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Total" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Time" type="xs:string" />
+      <xs:attribute name="TimeStamp" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="B3Status" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
